@@ -5,7 +5,7 @@
 </div>
 <div class="user-list">
     <ul>
-        <li ng-repeat="i in $ctrl.users | searchFor: searchString" ng-click="$ctrl.userClicked(i.id)" ng-class="i.selected ? 'selected' : null">
+        <li ng-repeat="i in $ctrl.users | searchFor: searchString" class="selectable" ng-click="$ctrl.userClicked(i.id)" ng-class="i.selected ? 'selected' : null">
             <!-- Directive to render user avatar -->
             <avatar user="i.id"></avatar>
             <p>{{i.full_name}}</p>

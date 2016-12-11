@@ -112,6 +112,9 @@ ul li{
 	border-bottom: 1px solid #ddd;
 	padding: 10px;
 	overflow: hidden;
+}
+
+li.selectable {
 	cursor: pointer;
 }
 
@@ -135,6 +138,10 @@ li.selected {
 
 
 /* Buttons */
+
+button:focus {
+    outline:none;
+}
 
 div.button-set {
 	padding: 20px;
