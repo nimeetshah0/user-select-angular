@@ -51,7 +51,7 @@ this server is:
 npm start
 ```
 
-Now browse to the app at [`localhost:8000/index.html`][local-app-url].
+Now browse to the app at [`localhost:8000`][local-app-url].
 
 
 ## Directory Layout
@@ -90,7 +90,7 @@ app/                    --> all of the source files for the application
 [jdk]: https://wikipedia.org/wiki/Java_Development_Kit
 [jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
 [karma]: https://karma-runner.github.io/
-[local-app-url]: http://localhost:8000/index.html
+[local-app-url]: http://localhost:8000/
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.org/
 [protractor]: http://www.protractortest.org/
