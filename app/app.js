@@ -16,6 +16,7 @@ angular
 	    $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
 	    	$rootScope.common = {};
             // set page title
-            // $rootScope.common.title = current.title;
+            $rootScope.common.title = current.title;
+            $rootScope.common.previousPage = previous ? previous.$$route.originalPath : null;
         });
     });
