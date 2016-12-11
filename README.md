@@ -74,7 +74,7 @@ app/                    --> all of the source files for the application
       userList.template.html       --> the partial template
       userList.component.js        --> the component logic
       userList.module.js           --> module declaration
-  data/                --> the view2 view template and logic
+  data/                --> data directory
     user-avatar.json            --> user avatar data file
     user-list.json              --> user list data file
   app.js                --> main application module
