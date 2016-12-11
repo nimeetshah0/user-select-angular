@@ -1,0 +1,18 @@
+<h2 class="page-title" ng-if="$ctrl.users.length">SELECTED USERS</h2>
+<div class="user-list" ng-if="$ctrl.users.length">
+    <ul>
+        <li ng-repeat="i in $ctrl.users | searchFor: searchString" ng-click="$ctrl.userClicked(i.id)" ng-class="i.selected ? 'selected' : null">
+            <avatar user="i.id"></avatar>
+            <p>{{i.full_name}}</p>
+        </li>
+    </ul>
+</div>
+<div class="button-set">
+    <button class="cancel-button" type="button" navigate-to="/">Back</button>
+</div>
+<h4 ng-if="!$ctrl.users.length">Oh snap! Nothing to see here</h4>
+<h4 ng-if="!$ctrl.users.length">Here's a random XKCD for your troubles</h4>
+<div class="loader" ng-if="!$ctrl.users.length && !$ctrl.xkcd">
+    Loading...
+</div>
+<img class="xkcd-img" ng-src="{{$ctrl.xkcd.img}}">

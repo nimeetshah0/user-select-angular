@@ -1,0 +1,18 @@
+<h2 class="page-title">SELECT USERS</h2>
+<div class="bar">
+    <!-- Create a binding between the searchString model and the text field -->
+    <input type="text" ng-model="searchString" placeholder="Search ..." />
+</div>
+<div class="user-list">
+    <ul>
+        <li ng-repeat="i in $ctrl.users | searchFor: searchString" ng-click="$ctrl.userClicked(i.id)" ng-class="i.selected ? 'selected' : null">
+            <!-- Directive to render user avatar -->
+            <avatar user="i.id"></avatar>
+            <p>{{i.full_name}}</p>
+        </li>
+    </ul>
+</div>
+<div class="button-set">
+	<button class="cancel-button" type="button" ng-click="$ctrl.clearSelected()">Cancel</button>
+	<button class="select-button" ng-class="$ctrl.disableSelectButton ? 'disabled' : null" type="button" navigate-to="/selected" ng-disabled="$ctrl.disableSelectButton">Select</button>
+</div>
