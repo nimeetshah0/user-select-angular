@@ -1,7 +1,7 @@
 <h2 class="page-title" ng-if="$ctrl.users.length">SELECTED USERS</h2>
 <div class="user-list" ng-if="$ctrl.users.length">
     <ul>
-        <li ng-repeat="i in $ctrl.users | searchFor: searchString" ng-click="$ctrl.userClicked(i.id)" ng-class="i.selected ? 'selected' : null">
+        <li ng-repeat="i in $ctrl.users | searchFor: searchString" ng-click="$ctrl.userClicked(i.id)">
             <avatar user="i.id"></avatar>
             <p>{{i.full_name}}</p>
         </li>
